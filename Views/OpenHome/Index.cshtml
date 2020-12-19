@@ -1,0 +1,206 @@
+﻿
+@model IEnumerable<AlterdataVotador.Models.MelhoriasVotar>
+
+@{
+    ViewData["Pack"] = "Produtos PACK";
+    ViewData["Votar"] = "Selecione";
+    ViewData["Bimer"] = "Produtos BIMER";
+    ViewData["Shop"] = "Produtos Wshop";
+    ViewData["Immobile"] = "Produtos Immobil";
+}
+<table class="table"></table>
+<blockquote>
+    <p>Para melhor votação, somente poderá ser selecionado uma melhoria para cada sistema(Módulos), assim teremos uma Coerência nas votações.</p>
+    <small>Por tanto, Bastante atenção na Hora de escolher <cite title="Source Title">Escolha aquele que você entende que será de maior utilidade para Clientes</cite></small>
+</blockquote>
+
+<h2>@ViewData["Pack"]</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="success">
+            <th>
+                @Html.DisplayNameFor(model => model.NomeModulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MelhoriaArea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataVotacao_Votar)
+            </th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="">
+                <td class="">
+                    @Html.RadioButton("Votar", new { })   
+
+                    @Html.DisplayFor(mmodelItem => item.NomeModulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(mmodelItem => item.MelhoriaArea)
+                </td>
+                <td>
+                    @Html.DisplayFor(mmodelItem => item.DataVotacao_Votar)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="" aria-describedby="">Deteils</button>
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+<form id="">
+    <div>
+        <h2>@ViewData["Bimer"]</h2>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr class="success">
+                    <th>
+                        @Html.DisplayText("Select")
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NomeModulo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MelhoriaArea)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataVotacao_Votar)
+                    </th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr class="">
+                    <td class="">
+                        @Html.RadioButton("Votar", new { }) 
+                        </td>
+                    <td>
+                        @Html.DisplayFor(mmodelItem => item.NomeModulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mmodelItem => item.MelhoriaArea)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mmodelItem => item.DataVotacao_Votar)
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="" aria-describedby="">Deteils</button>
+                    </td>
+
+                </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
+</form>
+
+
+<form id="">
+    <div>
+
+        <h2>@ViewData["Shop"]</h2>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr class="success">
+                    <th>
+                        @Html.DisplayNameFor(model => model.NomeModulo)  
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MelhoriaArea)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataVotacao_Votar)
+                    </th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr class="">
+                    <td class="">
+                        @Html.RadioButton("Votar", "Votar", new { })    
+
+                        @Html.DisplayFor(mmodelItem => item.NomeModulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mmodelItem => item.MelhoriaArea)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mmodelItem => item.DataVotacao_Votar)
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="" aria-describedby="">Deteils</button>
+                    </td>
+
+                </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
+</form>
+
+<form id="">
+<div>
+
+    <h2>@ViewData["Immobile"]</h2>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr class="success">
+                <th>
+                    @Html.DisplayNameFor(model => model.NomeModulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MelhoriaArea)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataVotacao_Votar)
+                </th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr class="">
+                <td class="">
+                    @Html.RadioButton("Votar", "Votar", new { })    
+
+                    @Html.DisplayFor(mmodelItem => item.NomeModulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(mmodelItem => item.MelhoriaArea)
+                </td>
+                <td>
+                    @Html.DisplayFor(mmodelItem => item.DataVotacao_Votar)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="" aria-describedby="">Deteils</button>
+                </td>
+
+            </tr>
+            }
+
+        </tbody>
+
+    </table>
+</div>
+</form>
